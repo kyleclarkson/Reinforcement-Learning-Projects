@@ -5,7 +5,7 @@ import random
 class TrainingConfig():
 
     def __init__(self):
-        self.num_of_episodes = 1000
+        self.num_of_episodes = 10000
         self.display_rewards_every = self.num_of_episodes // (self.num_of_episodes // 10)
         self.max_steps_per_episode = 100
 
@@ -43,6 +43,12 @@ class QLearning(BaseLearningMethod):
         self.q_table[state, action] = self.q_table[state, action]*(1-self.tc.learning_rate) \
             + self.tc.learning_rate*(reward + self.tc.discount_rate*np.max(self.q_table[new_state, :]))
 
+    def save_q_table(self, name):
+        np.save(name+".npy", self.q_table)
+
+    def load_q_table(self, name):
+        return np.load(name+".npy")
+
 
 if __name__ == '__main__':
     # Create gym environment
@@ -51,6 +57,8 @@ if __name__ == '__main__':
     tc = TrainingConfig()
     train = QLearning(env.observation_space.n, env.action_space.n, tc)
 
+    print(train.load_q_table("saved_models/q_test"))
+    exit(1)
     # Maintain reward over all episodes.
     rewards_all_episodes = []
 
@@ -90,8 +98,12 @@ if __name__ == '__main__':
 
     print(tc.display_rewards_every)
     display_rewards = np.split(np.array(rewards_all_episodes), 10)
-    count = 100
+    count = tc.num_of_episodes / 10
     for r in display_rewards:
+        # Display average reward for this time window.
         print(count, ": ", str(np.sum(r/100)))
-        count += 100
+        count += tc.num_of_episodes / 10
+
+    # save table
+    train.save_q_table("saved_models/q_test")
 
