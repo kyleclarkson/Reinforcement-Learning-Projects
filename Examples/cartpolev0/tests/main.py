@@ -4,7 +4,7 @@ from cartpolev0.utils.wrapper import DiscreteObservationSpaceWrapper
 
 def test_wrapper():
     print("=== test_wrapper() ===")
-    env = gym.make('CartPole-v0')
+    env = gym.make('CartPolev0')
     env = DiscreteObservationSpaceWrapper(
         env,
         num_bins=10,

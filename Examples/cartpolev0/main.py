@@ -1,11 +1,11 @@
 import gym
 
-from cartpolev0.utils.wrapper import DiscreteObservationSpaceWrapper
-from cartpolev0.policies.QLearning import QLearningPolicy
+from CartPolev0.utils.wrapper import DiscreteObservationSpaceWrapper
+from CartPolev0.policies.QLearning import QLearningPolicy
 
 if __name__ == '__main__':
     env = DiscreteObservationSpaceWrapper(
-        env=gym.envs.make('CartPole-v0'),
+        env=gym.envs.make('CartPolev0'),
         num_bins=10,
         low=[-2.4, -2.0, -0.42, -3.5],
         high=[2.4, 2.0, 0.42, 3.5]

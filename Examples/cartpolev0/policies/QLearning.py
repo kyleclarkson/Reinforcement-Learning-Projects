@@ -6,7 +6,6 @@ from collections import defaultdict
 class TrainingConfig:
     alpha = 0.1
     epsilon = 1.0
-    epsilon=0
     gamma = 0.9
     num_episodes = 5000
 
