@@ -1,5 +1,5 @@
 import gym
-from cartpolev0.wrapper import DiscreteObservationSpaceWrapper
+from cartpolev0.utils.wrapper import DiscreteObservationSpaceWrapper
 
 
 def test_wrapper():

@@ -17,6 +17,7 @@ class DiscreteObservationSpaceWrapper(gym.ObservationWrapper):
         self.value_bins = [np.linspace(lo, hi, num_bins) for lo, hi in zip(low, high)]
         # The number of possible states using the number of bins.
         self.observation_space.n = gym.spaces.Discrete(num_bins ** len(low))
+        self.observation_space = self.observation_space.n
 
     def observation(self, observation):
         """
