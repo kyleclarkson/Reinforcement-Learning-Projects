@@ -5,7 +5,7 @@ import random
 class TrainingConfig():
 
     def __init__(self):
-        self.num_of_episodes = 1_000_000
+        self.num_of_episodes = 1_000
         self.display_rewards_every = self.num_of_episodes // (self.num_of_episodes // 10)
         self.display_training_iterations = self.num_of_episodes // 10
         self.max_steps_per_episode = 100
@@ -23,9 +23,10 @@ class TrainingConfig():
                             * np.exp(-self.explore_decay_rate*current_episode) + self.min_explore_rate
 
 class BaseQLearningMethod():
-    def updateQ(self):
+    def updateQ(self, state, action, new_state, reward, q_table, tc):
         pass
 
+# TODO implement SARSA
 class SARSA_QLearningMethod(BaseQLearningMethod):
     def __init__(self):
         pass
@@ -45,18 +46,24 @@ class SARSA_QLearningMethod(BaseQLearningMethod):
                                     q_table[new_state, :]))
 
 
-        def update_q(self, state, action, new_state, reward):
-            """
-            Update Q table using Q(s,a) += learning_rate(r+discount*Q(s',:) - Q(s,a) (typed differently)
-            :param state: current state
-            :param action: action take
-            :param next_state: new state
-            :param reward: reward amount
-            :return: ---
-            """
-            self.q_table[state, action] = self.q_table[state, action] * (1 - self.tc.learning_rate) \
-                                          + self.tc.learning_rate * (reward + self.tc.discount_rate * np.max(
-                self.q_table[new_state, :]))
+class QLearningMethod():
+    def __init__(self):
+        pass
+    def updateQ(self, state, action, new_state, reward, q_table, tc):
+        """
+        Update Q table using Q(s,a) += learning_rate(r+discount*Q(s',:) - Q(s,a) (typed differently)
+        :param state: current state
+        :param action: action take
+        :param next_state: new state
+        :param reward: reward amount
+        :return: ---
+        """
+        q_table[state, action] = q_table[state, action] * (1 - tc.learning_rate) \
+                                    + tc.learning_rate * (reward + tc.discount_rate * np.max(
+                                        q_table[new_state, :]))
+        return q_table
+
+
 
 class QLearning():
     def __init__(self, env, training_config, learning_method):
@@ -68,9 +75,6 @@ class QLearning():
         self.learning_method = learning_method
 
         self.rewards_all_episodes = []
-
-        # TODO: Pass learning method as init parameter.
-        self.learning_method = learning_method
 
     def learn(self):
         """
@@ -99,9 +103,8 @@ class QLearning():
                 # Take environment step
                 new_state, reward, done, info = self.env.step(action)
 
-                # TODO Update update_Q using call to Learning method class.
-
-                self.update_q(state, action, new_state, reward)
+                # Update q table using specified learning method.
+                self.q_table = self.learning_method.updateQ(state, action, new_state, reward, self.q_table, self.tc)
 
                 # Update state, rewards
                 state = new_state
@@ -115,18 +118,6 @@ class QLearning():
             # Update episode rewards
             self.rewards_all_episodes.append(rewards_per_ep)
 
-    def update_q(self, state, action, new_state, reward):
-        """
-        Update Q table using Q(s,a) += learning_rate(r+discount*Q(s',:) - Q(s,a) (typed differently)
-        :param state: current state
-        :param action: action take
-        :param next_state: new state
-        :param reward: reward amount
-        :return: ---
-        """
-        self.q_table[state, action] = self.q_table[state, action]*(1-self.tc.learning_rate) \
-            + self.tc.learning_rate*(reward + self.tc.discount_rate*np.max(self.q_table[new_state, :]))
-
     def ave_reward_over_window(self):
         """
         Compute average reward over a window of training episodes.
@@ -135,6 +126,7 @@ class QLearning():
         if len(self.rewards_all_episodes) == 0:
             return []
         send = []
+        print(self.rewards_all_episodes[0], self.rewards_all_episodes[-1])
         for r in np.split(np.array(self.rewards_all_episodes), 10):
             # Display average reward for this time window.
             send.append(np.sum(r/ len(r)))
@@ -156,10 +148,15 @@ class QLearning():
 if __name__ == '__main__':
     # Create gym environment
     env = gym.make("FrozenLake-v0")
+    # The training configurations
     tc = TrainingConfig()
-    model = QLearning(env, tc)
+    # The learning method (e.g. SARSA)
+    lm = QLearningMethod()
+    model = QLearning(env, tc, lm)
 
-    model.save_q_table("saved_models/before")
+
+
+    # model.save_q_table("saved_models/before")
     print("Learning")
     model.learn()
     ave_rewards = model.ave_reward_over_window()
@@ -167,4 +164,4 @@ if __name__ == '__main__':
     for r in ave_rewards:
         print(r)
 
-    model.save_q_table("saved_models/after")
+    # model.save_q_table("saved_models/after")
