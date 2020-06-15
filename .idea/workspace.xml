@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a9b72a-fb3b-4b7e-b08a-dc2f6c0adc4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gym-env/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gym-env/cartpole-v0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-methods/QLearning.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter2- Bandits/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Introduction-to-RL-textbook/Chapter2- Bandits/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/CartPolev0.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/FrozenLake-v0.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-env/cartpole-v0.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym-env/cartpole-v0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learning-methods/QLearning.py" beforeDir="false" afterPath="$PROJECT_DIR$/learning-methods/QLearning.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +48,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.cartpole-v0">
+    <configuration name="cartpole-v0" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Introduction-to-RL-Barto-Sutton" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gym-env" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym-env/cartpole-v0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Introduction-to-RL-Barto-Sutton" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +95,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cartpole-v0" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -91,7 +110,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567574233175</updated>
-      <workItem from="1592159502004" duration="1400000" />
+      <workItem from="1592159502004" duration="1633000" />
+      <workItem from="1592202169852" duration="1735000" />
     </task>
     <servers />
   </component>
@@ -110,5 +130,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Reinforcement_Learning_Projects$cartpole_v0.coverage" NAME="cartpole-v0 Coverage Results" MODIFIED="1592203361861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gym-env" />
   </component>
 </project>
