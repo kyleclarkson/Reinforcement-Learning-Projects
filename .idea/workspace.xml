@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36a9b72a-fb3b-4b7e-b08a-dc2f6c0adc4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/learning-methods/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-methods/learning-methods.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Introduction-to-RL-Barto-Sutton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Introduction-to-RL-Barto-Sutton.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-methods/QLearning.py" beforeDir="false" />
-    </list>
+    <list default="true" id="36a9b72a-fb3b-4b7e-b08a-dc2f6c0adc4a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -137,7 +131,7 @@
       <workItem from="1592159502004" duration="1633000" />
       <workItem from="1592202169852" duration="1735000" />
       <workItem from="1592245973092" duration="1005000" />
-      <workItem from="1592247590564" duration="1994000" />
+      <workItem from="1592247590564" duration="2037000" />
     </task>
     <servers />
   </component>
@@ -165,22 +159,26 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="669" y="155" key="#main/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592246259120" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1592248153583">
-      <screen x="0" y="40" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1592265026196">
+      <screen x="1920" y="-38" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1592248153583">
-      <screen x="0" y="40" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026196" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1592265026196">
+      <screen x="1920" y="-38" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1592248153583">
-      <screen x="0" y="40" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026196" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1592265026195">
+      <screen x="1920" y="-38" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1592248153583">
-      <screen x="0" y="40" width="1920" height="1040" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026195" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1592265026196">
+      <screen x="1920" y="-38" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026196" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Reinforcement_Learning_Projects$main.coverage" NAME="main Coverage Results" MODIFIED="1592248153566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples/FrozenLake-v0" />
