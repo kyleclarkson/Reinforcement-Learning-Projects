@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="36a9b72a-fb3b-4b7e-b08a-dc2f6c0adc4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/gym-env/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gym-env/cartpole-v0.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/learning-methods/QLearning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chapter2- Bandits/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Introduction-to-RL-textbook/Chapter2- Bandits/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/CartPolev0.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/FrozenLake-v0.ipynb" beforeDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="36a9b72a-fb3b-4b7e-b08a-dc2f6c0adc4a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,29 +21,68 @@
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kyle\Documents\GitHub\Reinforcement-Learning-Projects\learning-methods" />
+      <recent name="C:\Users\Kyle\Documents\GitHub\Reinforcement-Learning-Projects" />
       <recent name="C:\Users\kylec\Documents\GitHub\Reinforcement-Learning-Projects\Introduction-to-RL-textbook" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="cartpole-v0" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Introduction-to-RL-Barto-Sutton" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/gym-env" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/gym-env/cartpole-v0.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Introduction-to-RL-Barto-Sutton" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Kyle\Anaconda3\envs\rl\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Examples/FrozenLake-v0" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Examples/FrozenLake-v0/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Introduction-to-RL-Barto-Sutton" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,8 +105,15 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.cartpole-v0" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.test" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.cartpole-v0" />
         <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
@@ -91,24 +128,60 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567574233175</updated>
-      <workItem from="1592159502004" duration="1400000" />
+      <workItem from="1592159502004" duration="1633000" />
+      <workItem from="1592202169852" duration="1735000" />
+      <workItem from="1592245973092" duration="1005000" />
+      <workItem from="1592247590564" duration="2037000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592246783665">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="414" y="215" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592246783665" />
+    <state x="669" y="155" key="#main" timestamp="1592246259120">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="669" y="155" key="#main/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592246259120" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1592265026196">
+      <screen x="1920" y="-38" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026196" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1592265026196">
+      <screen x="1920" y="-38" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026196" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1592265026195">
+      <screen x="1920" y="-38" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026195" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1592265026196">
+      <screen x="1920" y="-38" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.40.1920.1040/1920.-38.1920.1040@0.40.1920.1040" timestamp="1592248153583" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.40.1920.1040/1920.-38.1920.1040@1920.-38.1920.1040" timestamp="1592265026196" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Reinforcement_Learning_Projects$main.coverage" NAME="main Coverage Results" MODIFIED="1592248153566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Examples/FrozenLake-v0" />
+    <SUITE FILE_PATH="coverage/Reinforcement_Learning_Projects$cartpole_v0.coverage" NAME="cartpole-v0 Coverage Results" MODIFIED="1592248103925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/gym-env" />
   </component>
 </project>

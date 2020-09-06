@@ -1,1 +1,1 @@
-# Introduction-to-RL-Barto-Sutton
+# Testing of RL Methods and Environments
