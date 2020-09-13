@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 """
 
 class CartPoleStateDigitizer():
-    def __init__(self, bounds=(2.4, 4, 0.209, 4), n_bins=10):
+    def __init__(self, bounds=(2.4, 4, 0.209, 4), n_bins=16):
         self.position_space = np.linspace(-1*bounds[0], bounds[0], n_bins)
         self.velocity_space = np.linspace(-1*bounds[1], bounds[1], n_bins)
         self.pole_angle_space = np.linspace(-1*bounds[2], bounds[2], n_bins)
@@ -73,11 +73,11 @@ class Agent():
         """ Init all Q value pairs to 0. """
         for state in self.state_space:
             for action in self.action_space:
-                self.Q[(state, action)] = 0
+                self.Q[(state, action)] = 0.0
 
     def max_action(self, state):
         """ Return action corresponding to max Q(s,a). """
-        actions = np.array(self.Q[(state, a)] for a in self.action_space)
+        actions = np.array([self.Q[(state, a)] for a in self.action_space])
         action = np.argmax(actions)
         return action
 
@@ -101,13 +101,13 @@ class Agent():
         a_max = self.max_action(state_)
 
         self.Q[(state, action)] = self.Q[(state, action)] + self.lr*\
-                                  (reward + self.gamma*self.Q[(state, a_max)]-self.Q[(state, action)])
+                                  (reward + self.gamma*self.Q[(state_, a_max)]-self.Q[(state, action)])
 
 
 if __name__ == '__main__':
     env = gym.make('CartPole-v0')
-    n_eps = 30_000
-    epsil_dec = 2 / n_eps
+    n_eps = 80_000
+    epsil_dec = 2.5 / n_eps
 
     digitizer = CartPoleStateDigitizer()
     agent = Agent(lr=0.01, gamma=0.99, n_actions=2,
@@ -131,7 +131,7 @@ if __name__ == '__main__':
             state = state_
             score += reward
 
-        if i % 2500 == 0:
+        if i % 5000 == 0:
             print('episode ', i, ' score %.1f' % score, ' epsilon %.3f' % agent.epsilon)
 
         agent.decrease_epsilon()
