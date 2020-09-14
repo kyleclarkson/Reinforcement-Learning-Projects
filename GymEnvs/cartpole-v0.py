@@ -2,11 +2,11 @@ import gym
 import numpy as np
 import matplotlib.pyplot as plt
 
-"""
-    A Temporal Difference Q Learning 
-    approach for CartPole environment.
-"""
+from LearningMethods.td_0 import Agent
 
+"""
+A Class to make the state space from continuous to discrete.
+"""
 class CartPoleStateDigitizer():
     def __init__(self, bounds=(2.4, 4, 0.209, 4), n_bins=16):
         self.position_space = np.linspace(-1*bounds[0], bounds[0], n_bins)
@@ -46,64 +46,6 @@ def plot_learning_curve(scores, x):
     plt.show()
 
 
-class Agent():
-    def __init__(self,
-                 lr,
-                 gamma,
-                 n_actions,
-                 state_space,
-                 epsil_start,
-                 epsil_end,
-                 epsil_dec):
-
-        self.lr = lr
-        self.gamma = gamma
-        self.epsilon = epsil_start
-        self.epsil_end = epsil_end
-        self.epsil_dec = epsil_dec
-
-        self.n_actions = n_actions
-        self.state_space = state_space
-        self.action_space = [i for i in range(self.n_actions)]
-
-        self.Q = {}
-        self.init_Q()
-
-    def init_Q(self):
-        """ Init all Q value pairs to 0. """
-        for state in self.state_space:
-            for action in self.action_space:
-                self.Q[(state, action)] = 0.0
-
-    def max_action(self, state):
-        """ Return action corresponding to max Q(s,a). """
-        actions = np.array([self.Q[(state, a)] for a in self.action_space])
-        action = np.argmax(actions)
-        return action
-
-    def choose_action(self, state):
-        """ Use epsilon greedy to choose action. """
-        if np.random.random() < self.epsilon:
-            action = np.random.choice(self.action_space)
-        else:
-            action = self.max_action(state)
-
-        return action
-
-    def decrease_epsilon(self):
-        if self.epsilon > self.epsil_end:
-            self.epsilon = self.epsilon - self.epsil_dec
-        else:
-            self.epsilon = self.epsil_end
-
-    def update_Q(self, state, action, reward, state_):
-        """ Update Q values using TD update rule. """
-        a_max = self.max_action(state_)
-
-        self.Q[(state, action)] = self.Q[(state, action)] + self.lr*\
-                                  (reward + self.gamma*self.Q[(state_, a_max)]-self.Q[(state, action)])
-
-
 if __name__ == '__main__':
     env = gym.make('CartPole-v0')
     n_eps = 80_000
@@ -111,8 +53,9 @@ if __name__ == '__main__':
 
     digitizer = CartPoleStateDigitizer()
     agent = Agent(lr=0.01, gamma=0.99, n_actions=2,
-                  epsil_start=1.0, epsil_end=0.01,
-                  epsil_dec=epsil_dec,
+                  epsilon_start=1.0,
+                  epsilon_end=0.01,
+                  epsilon_dec=epsil_dec,
                   state_space=digitizer.states)
 
     scores = []
