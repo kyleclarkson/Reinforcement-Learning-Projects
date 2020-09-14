@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="36a9b72a-fb3b-4b7e-b08a-dc2f6c0adc4a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-env/cartpole-v0.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym-env/cartpole-v0.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym-env/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym-env/lunarlander.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="fa70fa06-3428-4717-a7b2-9bec328a4266" />
   <component name="ProjectId" id="1QO8DMmp4yETDSChh7BwPuhrnkc" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -145,6 +146,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -159,12 +161,13 @@
       <workItem from="1592202169852" duration="1735000" />
       <workItem from="1592245973092" duration="1005000" />
       <workItem from="1592247590564" duration="2037000" />
-      <workItem from="1599974488665" duration="2074000" />
+      <workItem from="1599974488665" duration="3684000" />
+      <workItem from="1600053156346" duration="1544000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
