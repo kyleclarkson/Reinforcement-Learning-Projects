@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="36a9b72a-fb3b-4b7e-b08a-dc2f6c0adc4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/GymEnvs/lunarlander-v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LearningMethods/td_0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Introduction-to-RL-Barto-Sutton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Introduction-to-RL-Barto-Sutton.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DDPG-Actor-Critic/OUNoise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-env/cartpole-v0.py" beforeDir="false" afterPath="$PROJECT_DIR$/GymEnvs/cartpole-v0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym-env/lunarlander.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-methods/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/LearningMethods/PolicyGradient.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learning-methods/learning-methods.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,6 +187,7 @@
       <workItem from="1592247590564" duration="2037000" />
       <workItem from="1599974488665" duration="3684000" />
       <workItem from="1600053156346" duration="14557000" />
+      <workItem from="1600892538202" duration="684000" />
     </task>
     <servers />
   </component>
