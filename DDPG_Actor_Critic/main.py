@@ -147,17 +147,23 @@ def plot_learning_curve(x, scores, figure_file):
 if __name__ == '__main__':
 
     env = gym.make('LunarLanderContinuous-v2')
+
+    fc1_dims = 128
+    fc2_dims = 64
     agent = Agent(0.001, beta=0.001, input_dims=env.observation_space.shape, tau=0.001,
-                  batch_size=64, fc1_dims=400, fc2_dims=300, n_actions=env.action_space.shape[0])
+                  batch_size=64, fc1_dims=fc1_dims, fc2_dims=fc2_dims, n_actions=env.action_space.shape[0])
 
     n_games = 1500
-    filename = f'LunarLander_alpha_{str(agent.alpha)}_beta_{str(agent.beta)}_games_{str(n_games)}'
+    filename = f'LunarLander_alpha_{str(agent.alpha)}_beta_{str(agent.beta)}_games_' \
+               f'{str(n_games)}_shape_{str(fc1_dims)}-{str(fc2_dims)}'
     figure_file = 'plots/' + filename + '.png'
+    print("device: ", agent.actor.device)
+    print("filename: ", filename)
 
     best_score = env.reward_range[0]
     score_history = []
 
-    for i in range(n_games):
+    for i in range(1, n_games+1):
 
         obs = env.reset()
         done = False
@@ -174,7 +180,7 @@ if __name__ == '__main__':
         score_history.append(score)
         avg_score = np.mean(score_history[-100:])
 
-        if avg_score > best_score:
+        if avg_score > best_score and i > 800:
             best_score = avg_score
             agent.save_models()
 
