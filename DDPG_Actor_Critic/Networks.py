@@ -20,7 +20,7 @@ class CriticNetwork(nn.Module):
         self.checkpoint_file = os.path.join(self.checkpoint_dir, name + "_ddpg")
 
         self.fc1 = nn.Linear(*self.input_dims, self.fc1_dims)
-        self.fc2 = nn.Linear(*self.fc1_dims, self.fc2_dims)
+        self.fc2 = nn.Linear(self.fc1_dims, self.fc2_dims)
         # See LayerNorm vs BatchNorm1d
         self.bn1 = nn.LayerNorm(self.fc1_dims)
         self.bn2 = nn.LayerNorm(self.fc2_dims)
@@ -32,16 +32,16 @@ class CriticNetwork(nn.Module):
         # calculate fan ins and set initial parameter weights.
         f1 = 1./np.sqrt(self.fc1.weight.data.size()[0])
         self.fc1.weight.data.uniform_(-f1, f1)
-        self.fc1.weight.data.uniform_(-f1, f1)
+        self.fc1.bias.data.uniform_(-f1, f1)
         f2 = 1. / np.sqrt(self.fc2.weight.data.size()[0])
         self.fc2.weight.data.uniform_(-f2, f2)
-        self.fc2.weight.data.uniform_(-f2, f2)
+        self.fc2.bias.data.uniform_(-f2, f2)
         f3 = 0.005
         self.q.weight.data.uniform_(-f3, f3)
-        self.q.weight.data.uniform_(-f3, f3)
+        self.q.bias.data.uniform_(-f3, f3)
         f4 = 1. / np.sqrt(self.action_value.weight.data.size()[0])
         self.action_value.weight.data.uniform_(-f4, f4)
-        self.action_value.weight.data.uniform_(-f4, f4)
+        self.action_value.bias.data.uniform_(-f4, f4)
 
         # Set optimizer
         self.optimizer = optim.Adam(self.parameters(), lr=beta, weight_decay=0.01)
@@ -52,7 +52,7 @@ class CriticNetwork(nn.Module):
     def forward(self, state, action):
         state_value = self.fc1(state)
         state_value = self.bn1(state_value)
-        state_value = self.F.relu(state_value)
+        state_value = F.relu(state_value)
 
         state_value = self.fc2(state_value)
         state_value = self.bn2(state_value)
@@ -95,16 +95,13 @@ class ActorNetwork(nn.Module):
         # calculate fan ins and set initial parameter weights.
         f1 = 1. / np.sqrt(self.fc1.weight.data.size()[0])
         self.fc1.weight.data.uniform_(-f1, f1)
-        self.fc1.weight.data.uniform_(-f1, f1)
+        self.fc1.bias.data.uniform_(-f1, f1)
         f2 = 1. / np.sqrt(self.fc2.weight.data.size()[0])
         self.fc2.weight.data.uniform_(-f2, f2)
-        self.fc2.weight.data.uniform_(-f2, f2)
+        self.fc2.bias.data.uniform_(-f2, f2)
         f3 = 0.005
-        self.q.weight.data.uniform_(-f3, f3)
-        self.q.weight.data.uniform_(-f3, f3)
-        f4 = 1. / np.sqrt(self.action_value.weight.data.size()[0])
-        self.action_value.weight.data.uniform_(-f4, f4)
-        self.action_value.weight.data.uniform_(-f4, f4)
+        self.mu.weight.data.uniform_(-f3, f3)
+        self.mu.bias.data.uniform_(-f3, f3)
 
         # Set optimizer
         self.optimizer = optim.Adam(self.parameters(), lr=lr)
@@ -119,7 +116,7 @@ class ActorNetwork(nn.Module):
         x = self.fc2(x)
         x = self.bn2(x)
         x = F.relu(x)
-        x = F.tanh(x)
+        x = F.tanh(self.mu(x))
         return x
 
     def save_checkpoint(self):
